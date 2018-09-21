@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/51b140c338e104ce420867dd6c36964c/res/color/design_error.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/color/abc_primary_text_material_light.xml"
+    }
+]

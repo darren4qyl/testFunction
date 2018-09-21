@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入binder call frequency："/>
+    <EditText
+        android:id="@+id/binder_bg_edit_call_frequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code1"/>
+    <EditText
+        android:id="@+id/binder_bg_edit_call2_frequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code2"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call_specify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="@color/colorAccent"
+        android:text="Call activity specify function"/>
+    <TextView
+        android:id="@+id/binder_bg_tv_show_call_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wait response server count:"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Input notify thread number："/>
+    <EditText
+        android:id="@+id/binder_bg_edit_notify_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/binder_bg_btn_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity service notify thread"/>
+
+</LinearLayout>
+

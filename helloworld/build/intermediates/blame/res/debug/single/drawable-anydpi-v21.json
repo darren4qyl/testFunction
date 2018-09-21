@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/51b140c338e104ce420867dd6c36964c/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/51b140c338e104ce420867dd6c36964c/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    }
+]

@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

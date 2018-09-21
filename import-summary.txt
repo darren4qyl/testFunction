@@ -1,0 +1,53 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* Android.mk
+* Android.mk~
+* library/
+* library/ShellCommand/
+* library/ShellCommand/.Android.mk.swp
+* library/ShellCommand/Android.mk
+* library/ShellCommand/AndroidManifest.xml
+* library/ShellCommand/src/
+* library/ShellCommand/src/com/
+* library/ShellCommand/src/com/jaredrummler/
+* library/ShellCommand/src/com/jaredrummler/android/
+* library/ShellCommand/src/com/jaredrummler/android/shell/
+* library/ShellCommand/src/com/jaredrummler/android/shell/CommandResult.java
+* library/ShellCommand/src/com/jaredrummler/android/shell/Shell.java
+* library/ShellCommand/src/com/jaredrummler/android/shell/ShellExitCode.java
+* library/ShellCommand/src/com/jaredrummler/android/shell/ShellNotFoundException.java
+* library/ShellCommand/src/com/jaredrummler/android/shell/StreamGobbler.java
+* sync.sh
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => helloworld/src/main/AndroidManifest.xml
+* libs/constraint-layout-solver-1.0.2.jar => helloworld/libs/constraint-layout-solver-1.0.2.jar
+* res/ => helloworld/src/main/res/
+* src/ => helloworld/src/main/java/
+* src/com/edit/helloworld/.MainActivity.java.swp => helloworld/src/main/resources/com/edit/helloworld/.MainActivity.java.swp
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

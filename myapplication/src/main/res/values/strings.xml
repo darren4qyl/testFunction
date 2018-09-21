@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-->
+    view  toolbar title name
+    <!-->
+    <string-array name="view_tile_name" >
+        <item >设备控制界面</item>
+    </string-array>
+</resources>
