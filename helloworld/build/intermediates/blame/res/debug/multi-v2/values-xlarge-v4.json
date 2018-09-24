@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/res/merged/debug/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "/home/over/workspace/ appstore/testFunction/helloworld/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/values-xlarge-v4/values-xlarge-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,126,197,267,337,405",
-                        "endColumns": "70,70,69,69,67,67",
-                        "endOffsets": "121,192,262,332,400,468"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/qiyunlong/storageSpace/appCodes/appcodes/FunctionTestProject/helloworld/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
-            "map": [
-                {
-                    "source": "/home/qiyunlong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1d55bd21545b7949a6527addcc36dafa/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/home/over/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/616be62789c17d74fc34dfd934a04e31/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

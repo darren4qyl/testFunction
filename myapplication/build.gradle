@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 // 依赖插件脚本
 apply from: 'tinker-support.gradle'
 
+
+apply plugin: 'org.greenrobot.greendao'
+
+
 android {
     compileSdkVersion 28
 
@@ -9,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "b.com.myapplication"
-        minSdkVersion 26
+        minSdkVersion 14
         targetSdkVersion 28
         versionCode 2
         versionName "1.1"
@@ -30,6 +34,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+greendao {
+    schemaVersion 1000
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -46,4 +53,9 @@ dependencies {
     // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
     compile 'com.tencent.tinker:tinker-android-lib:1.9.6'
     compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    //GreenDao3.2 database
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    compile 'com.github.chenupt.android:springindicator:1.0.2@aar'
+
 }

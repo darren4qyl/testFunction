@@ -20,21 +20,42 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="800dp"
-            android:orientation="vertical"
-            >
-            <b.com.myapplication.animation.VrilleButton
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="vertical"
+                >
+                <b.com.myapplication.animation.VrilleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                </b.com.myapplication.animation.VrilleButton>
+            </FrameLayout>
+            <b.com.myapplication.widget.DeviceDetailWidget
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
 
-            </b.com.myapplication.animation.VrilleButton>
-        </FrameLayout>
+            </b.com.myapplication.widget.DeviceDetailWidget>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/device_info_background"/>
+        </LinearLayout>
     </ScrollView>
 
 
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </LinearLayout>
