@@ -15,10 +15,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="设备信息："/>
+                android:text="设备信息："
+                android:textSize="15dp"/>
             <TextView
+                android:id="@+id/device_info_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15dp"
                 android:background="@drawable/split_line"/>
         </LinearLayout>
         <LinearLayout
@@ -29,13 +32,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:textSize="15dp"
                 android:text="详细信息："/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15dp"
                 android:background="@drawable/split_line"/>
         </LinearLayout>
+        <ImageView
+            android:id="@+id/device_info_detail_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock_light_btn_0001"
+            android:scaleType="centerInside"
+            android:rotation="270"
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -46,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <b.com.myapplication.widget.TemperatureControlView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 />

@@ -32,4 +32,6 @@ public class MyApplication extends TinkerApplication {
         mSharePreferenceDevice = new SharedPreferencesHelper(this,"devices_status");
         CrashReport.initCrashReport(getApplicationContext(), "ee9fc06fbb", false);
     }
+
+
 }

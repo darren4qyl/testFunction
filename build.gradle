@@ -3,29 +3,33 @@
 buildscript {
     
     repositories {
-      //  google()
-        jcenter()
+
+        mavenCentral()
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url "https://jitpack.io" }
         google()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
-
+        classpath 'com.android.tools.build:gradle:3.2.0'
         // tinkersupport插件, 其中lastest.release指拉取最新版本，也可以指定明确版本号，例如1.0.4
         classpath "com.tencent.bugly:tinker-support:1.1.2"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.+'
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        mavenCentral()
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
         maven { url "https://jitpack.io" }
+        google()
 
+        jcenter()
     }
 }
 

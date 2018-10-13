@@ -1,5 +1,6 @@
 package b.com.myapplication.widget;
 
+import android.util.Log;
 import android.view.View;
 
 import android.content.Context;
@@ -23,6 +24,8 @@ import b.com.myapplication.R;
  * Created by yangle on 2016/11/29.
  */
 public class TemperatureControlView extends View {
+
+    final String TAG = "TemperatureControlView";
 
     // 控件宽
     private int width;
@@ -154,7 +157,7 @@ public class TemperatureControlView extends View {
      */
     private void drawScale(Canvas canvas) {
         canvas.save();
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(width / 2, height / 2);
         // 逆时针旋转135-2度
         canvas.rotate(-133);
         dialPaint.setColor(Color.parseColor("#3CB7EA"));
@@ -179,7 +182,7 @@ public class TemperatureControlView extends View {
      */
     private void drawArc(Canvas canvas) {
         canvas.save();
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(width / 2, height / 2);
         canvas.rotate(135 + 2);
         RectF rectF = new RectF(-arcRadius, -arcRadius, arcRadius, arcRadius);
         canvas.drawArc(rectF, 0, 265, false, arcPaint);
@@ -225,18 +228,18 @@ public class TemperatureControlView extends View {
         int buttonShadowHeight = buttonImageShadow.getHeight();
 
         // 绘制按钮阴影
-        canvas.drawBitmap(buttonImageShadow, (width - buttonShadowWidth) / 2,
-                (height - buttonShadowHeight) / 2, buttonPaint);
+        canvas.drawBitmap(bitMapScale(buttonImageShadow, (float) ((arcRadius*2.0)/(buttonShadowWidth-10))), (width/2-arcRadius),
+                (height/2-arcRadius), buttonPaint);
 
         Matrix matrix = new Matrix();
         // 设置按钮位置，移动到控件中心
-        matrix.setTranslate((width - buttonWidth) / 2, (height - buttonHeight) / 2);
+        matrix.setTranslate((width/2-arcRadius), (height/2-arcRadius));
         // 设置旋转角度，旋转中心为控件中心，当前也是按钮中心
         matrix.postRotate(45 + rotateAngle, width / 2, height / 2);
 
         //设置抗锯齿
         canvas.setDrawFilter(paintFlagsDrawFilter);
-        canvas.drawBitmap(buttonImage, matrix, buttonPaint);
+        canvas.drawBitmap(bitMapScale(buttonImage, (float) ((arcRadius*2.0)/(buttonWidth))), matrix, buttonPaint);
     }
 
     /**
@@ -246,12 +249,19 @@ public class TemperatureControlView extends View {
      */
     private void drawTemp(Canvas canvas) {
         canvas.save();
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(width / 2, height / 2);
 
         float tempWidth = tempPaint.measureText(temperature + "");
         float tempHeight = (tempPaint.ascent() + tempPaint.descent()) / 2;
         canvas.drawText(temperature + "°", -tempWidth / 2 - dp2px(5), -tempHeight, tempPaint);
         canvas.restore();
+    }
+
+    private Bitmap bitMapScale(Bitmap bitmap,float scale) {
+        Matrix matrix = new Matrix();
+        matrix.postScale(scale,scale); //长和宽放大缩小的比例
+        Bitmap resizeBmp = Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(),bitmap.getHeight(),matrix,true);
+        return resizeBmp;
     }
 
     private boolean isDown;

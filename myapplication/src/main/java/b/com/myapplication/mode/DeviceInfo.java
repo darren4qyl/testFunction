@@ -1,11 +1,18 @@
 package b.com.myapplication.mode;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Index;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Generated;
+
+import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity(indexes = {
@@ -28,7 +35,7 @@ public class DeviceInfo {
     @Generated(hash = 2125166935)
     public DeviceInfo() {
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -52,4 +59,9 @@ public class DeviceInfo {
     public void setDate(java.util.Date date) {
         this.date = date;
     }
+
+    public String toString(){
+        return "id:"+id+",name="+name+",data="+date;
+    }
+
 }

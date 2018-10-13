@@ -16,6 +16,7 @@ import b.com.myapplication.mode.DeviceInfo;
 public class DeviceDetailWidget extends LinearLayout {
     final static private String TAG = "DeviceDetailWidget";
     private ArrayList<DeviceInfo> mDevicesInfo = new ArrayList<>();
+    private LinearLayout bottom;
 
 
     public DeviceDetailWidget(Context context) {
@@ -45,10 +46,11 @@ public class DeviceDetailWidget extends LinearLayout {
         LinearLayout detail = initDeviceDetailView(context);
         LinearLayout.LayoutParams detailParams = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
         detailParams.weight = 1;
-        LinearLayout bottom = initDeviceBottomView(context);
-        LayoutParams bottomParams = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
-        bottomParams.weight = 5;
         addView(detail,detailParams);
+        bottom = initDeviceBottomView(context);
+        LayoutParams bottomParams = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
+        bottomParams.weight = 8;
+
         addView(bottom,bottomParams);
 
     }
@@ -60,5 +62,8 @@ public class DeviceDetailWidget extends LinearLayout {
     private LinearLayout initDeviceBottomView(Context context) {
         LinearLayout view = new LinearLayout(context);
         return view;
+    }
+    public void setVisibility(int isVisible){
+        bottom.setVisibility(isVisible);
     }
 }

@@ -13,6 +13,16 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="start"/>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="arraylist indexboundof："/>
+    <Button
+        android:id="@+id/mutilate_thread_arraymap_btn_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="start"/>
+s
 </LinearLayout>
 

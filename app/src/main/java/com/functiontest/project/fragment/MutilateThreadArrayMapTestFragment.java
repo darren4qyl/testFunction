@@ -3,6 +3,7 @@ package com.functiontest.project.fragment;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.Settings;
@@ -13,12 +14,15 @@ import android.widget.Button;
 
 import com.functiontest.project.R;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MutilateThreadArrayMapTestFragment extends BaseFragment implements View.OnClickListener {
     private final String TAG = "MutilateThreadArrayMapTestFragment";
     private View view;
     private Button mBtnNormalStart = null;
+    private Button mBtnIndexBoundof = null;
     private ArrayMap<String,Integer> mLockArray = new ArrayMap<>();
     @Override
     public View InitilizedView() {
@@ -26,6 +30,8 @@ public class MutilateThreadArrayMapTestFragment extends BaseFragment implements 
             view = View.inflate(mMainActivity, R.layout.fragment_mutilate_thread_arraymap_test, null);
         mBtnNormalStart = view.findViewById(R.id.mutilate_thread_arraymap_btn_normal_start);
         mBtnNormalStart.setOnClickListener(this);
+        mBtnIndexBoundof = view.findViewById(R.id.mutilate_thread_arraymap_btn_index);
+        mBtnIndexBoundof.setOnClickListener(this);
         return view;
     }
 
@@ -39,6 +45,29 @@ public class MutilateThreadArrayMapTestFragment extends BaseFragment implements 
                 am.isUserAMonkey();
                 //ErrorTestFunc();
                 break;
+            case R.id.mutilate_thread_arraymap_btn_index:
+                File dataDirectory = Environment.getDataDirectory();
+                Log.d(TAG, "dataDirectory = " + dataDirectory);
+                if (dataDirectory != null) {
+                    File[] files = dataDirectory.listFiles();
+                    Log.d(TAG, "files = " + files);
+                }
+                //Log.d(TAG, "onClick: "+Environment.getDataDirectory().listFiles().length);
+                //IndexOfBound();
+                break;
+        }
+    }
+    private void IndexOfBound(){
+        String[] data;
+
+        data = new String[1]; //初始化
+        data[0] = "李四"; //这里就会ArrayIndexOutOfBoundsException
+        Log.d(TAG, "IndexOfBound: "+data[1]);
+
+        ArrayList test = new ArrayList();
+        test.add("1111");
+        for (int i = 0;i < 2;i++) {
+            Log.d(TAG, "IndexOfBound: "+test.get(i));
         }
     }
     private void NormalTestFunc(){
