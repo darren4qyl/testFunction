@@ -16,6 +16,7 @@
 
 package b.com.myapplication.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,10 +27,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.google.common.util.concurrent.Runnables;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import b.com.myapplication.R;
@@ -49,12 +54,14 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     private TextView tvDeviceInfoName;
     private DeviceInfoData info;
     private DeviceDetailWidget mDeviceDetail;
+    private ArrayList<Integer> mSwitchPicRecouseId = new ArrayList<>(40);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         info = (DeviceInfoData) getArguments().get("data");
         Log.d(TAG, "onCreate: "+info.getName());
+
 
     }
 
@@ -70,7 +77,7 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             view.requestLayout();
         }
         imageViewSwitch.setOnClickListener(this);
-
+        new Thread(new InitializeResourceRunner(this.getContext())).start();
 
         return view;
     }
@@ -111,5 +118,29 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
          //   imageViewSwitch.setImageResource();
         }
 
+    }
+    private class InitializeResourceRunner implements Runnable {
+        private Context mContext;
+        public InitializeResourceRunner(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        public void run() {
+            for(int i=1; i<= 40 ;i++){
+                String index = String.format("%02d",i);
+                mSwitchPicRecouseId.add(getDrawableId(mContext,"lock_light_btn_00"+index));
+                Log.d(TAG, "run: ---id:"+getDrawableId(mContext,"lock_light_btn_00"+index)+",index="+index);
+                Glide.with(mContext).load(getDrawableId(mContext,"lock_light_btn_00"+index));
+            }
+        }
+        private int getIdentifierByType(Context context, String resourceName, String defType) {
+            return context.getResources().getIdentifier(resourceName,
+                    defType,
+                    context.getPackageName());
+        }
+        public int getDrawableId(Context context, String resourceName) {
+            return getIdentifierByType(context, resourceName, "drawable");
+        }
     }
 }
