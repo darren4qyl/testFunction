@@ -17,6 +17,7 @@
 package b.com.myapplication.view;
 
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -55,6 +56,8 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     private DeviceInfoData info;
     private DeviceDetailWidget mDeviceDetail;
     private ArrayList<Integer> mSwitchPicRecouseId = new ArrayList<>(40);
+    private AnimationDrawable mPowserOnAnimation;
+    private AnimationDrawable mPowserOffAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,8 +80,6 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             view.requestLayout();
         }
         imageViewSwitch.setOnClickListener(this);
-        new Thread(new InitializeResourceRunner(this.getContext())).start();
-
         return view;
     }
 
@@ -103,22 +104,37 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     public void onDestroy() {
         super.onDestroy();
     }
-
+    boolean isPowserStatus = false;
     @Override
     public void onClick(View view) {
+        isPowserStatus = isPowserStatus? false: true;
         switch (view.getId()){
             case R.id.device_info_detail_switch:
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.d(TAG, "run: -----------"+isPowserStatus);
+                        if(isPowserStatus) {
+                            imageViewSwitch.setImageResource(R.drawable.powser_switch_on_animation);
+                        }else{
+                            imageViewSwitch.setImageResource(R.drawable.powser_switch_off_animation);
+                        }
+                        if(!isNeedStart())
+                        {
+                            Log.d(TAG, "run: ---------");
+                            return;
+                        }
+
+                    }
+                    private boolean isNeedStart(){
+                        return ((mPowserOffAnimation!=null && mPowserOffAnimation.isRunning())||(mPowserOnAnimation!=null&& mPowserOnAnimation.isRunning()));
+                    }
+                }).start();
                 break;
         }
     }
 
-    private void powerSwitch(boolean status) {
-        int index = (status)? 0 : 40;
-        for (int i = index; status? i >= 40 : i < 0; i++) {
-         //   imageViewSwitch.setImageResource();
-        }
 
-    }
     private class InitializeResourceRunner implements Runnable {
         private Context mContext;
         public InitializeResourceRunner(Context context) {
@@ -129,9 +145,10 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
         public void run() {
             for(int i=1; i<= 40 ;i++){
                 String index = String.format("%02d",i);
-                mSwitchPicRecouseId.add(getDrawableId(mContext,"lock_light_btn_00"+index));
-                Log.d(TAG, "run: ---id:"+getDrawableId(mContext,"lock_light_btn_00"+index)+",index="+index);
-                Glide.with(mContext).load(getDrawableId(mContext,"lock_light_btn_00"+index));
+                int resourceId = getDrawableId(mContext,"lock_light_btn_00"+index);
+                if(resourceId > 0)
+                    mSwitchPicRecouseId.add(resourceId);
+                Glide.with(mContext).load(mSwitchPicRecouseId.get(mSwitchPicRecouseId.size()-1));
             }
         }
         private int getIdentifierByType(Context context, String resourceName, String defType) {

@@ -56,6 +56,11 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Muti-thread ArrayMap">
             </item>
+            <item
+                android:id="@+id/web_test"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Web test">
+            </item>
         </menu>
 
     </item>

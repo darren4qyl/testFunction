@@ -24,6 +24,10 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
     private Button mBtnBinderCode = null;
     private EditText mEditBinderCall2Frequency = null;
     private Button mBtnBinderCode2 = null;
+    private Button mBtnBinderCode3 = null;
+    private Button mBtnBinderCode4 = null;
+    private Button mBtnBinderCode5 = null;
+    private Button mBtnBinderCode6 = null;
     private Button mBtnBinderCallSpecify = null;
     private TextView mTvWaitNotifyCount = null;
     private EditText mEditBinderNotifyNum = null;
@@ -39,6 +43,10 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
         mBtnBinderCode = view.findViewById(R.id.binder_bg_btn_binder_call);
         mEditBinderCall2Frequency = view.findViewById(R.id.binder_bg_edit_call2_frequency);
         mBtnBinderCode2 = view.findViewById(R.id.binder_bg_btn_binder_call2);
+        mBtnBinderCode3 = view.findViewById(R.id.binder_bg_btn_binder_call3);
+        mBtnBinderCode4 = view.findViewById(R.id.binder_bg_btn_binder_call4);
+        mBtnBinderCode5 = view.findViewById(R.id.binder_bg_btn_binder_call5);
+        mBtnBinderCode6 = view.findViewById(R.id.binder_bg_btn_binder_call6);
         mBtnBinderCallSpecify = view.findViewById(R.id.binder_bg_btn_binder_call_specify);
         mTvWaitNotifyCount = view.findViewById(R.id.binder_bg_tv_show_call_count);
         mEditBinderNotifyNum = view.findViewById(R.id.binder_bg_edit_notify_number);
@@ -46,6 +54,10 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
 
         mBtnBinderCode.setOnClickListener(this);
         mBtnBinderCode2.setOnClickListener(this);
+        mBtnBinderCode3.setOnClickListener(this);
+        mBtnBinderCode4.setOnClickListener(this);
+        mBtnBinderCode5.setOnClickListener(this);
+        mBtnBinderCode6.setOnClickListener(this);
         mBtnBinderCallSpecify.setOnClickListener(this);
         mBtnBinderNotify.setOnClickListener(this);
         return view;
@@ -82,6 +94,35 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
                     }).start();
                 }
                 break;
+            case R.id.binder_bg_btn_binder_call3:
+                for (int i=0;i<10;i++){
+                    new Thread(()->{
+                        Log.d(TAG, "onClick: ------------");
+                        CallActivityTestCode(9021,false);
+                    }).start();
+                }
+                break;
+            case R.id.binder_bg_btn_binder_call4:
+                for (int i=0;i<10;i++){
+                    new Thread(()->{
+                        CallActivityTestCode(9022,false);
+                    }).start();
+                }
+                break;
+            case R.id.binder_bg_btn_binder_call5:
+                for (int i=0;i<10;i++){
+                    new Thread(()->{
+                        CallActivityTestCode(9023,false);
+                    }).start();
+                }
+                break;
+            case R.id.binder_bg_btn_binder_call6:
+                for (int i=0;i<10;i++){
+                    new Thread(()->{
+                        CallActivityTestCode(9024,false);
+                    }).start();
+                }
+                break;
             case R.id.binder_bg_btn_binder_call_specify:
                 new Thread(()->{
                     CallActivityTestCode(9015,false);
@@ -93,15 +134,19 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
                 mTvWaitNotifyCount.setText(mTvWaitNotifyCount.getText().toString().replaceFirst(":(.*)",":"+String.valueOf(waitResponseNotifyCount)));
                 for (int i = 0;i<Integer.valueOf(edit);i++){
                     new Thread(()->{
-                        CallActivityTestCode(9011,false);
+                        CallActivityTestCode(9011,false,false);
                     }).start();
                 }
                 break;
         }
 
     }
-    @SuppressLint("ServiceCast")
     private void CallActivityTestCode(int code,boolean isReply){
+        CallActivityTestCode(code,isReply,true);
+    }
+
+    @SuppressLint("ServiceCast")
+    private void CallActivityTestCode(int code,boolean isReply,boolean isQueue){
         Parcel data = Parcel.obtain();
         Parcel reply = Parcel.obtain();
         if(mActivity == null){
@@ -123,7 +168,7 @@ public class BinderBgTestFragment extends BaseFragment implements View.OnClickLi
             }
         }
         try {
-            mActivity.transact(code,data,reply,0);
+            mActivity.transact(code,data,reply,isQueue?2:0);
             reply.readException();
             if(isReply)
                 Log.d(TAG, "CallActivityTestCode: "+reply.readInt());

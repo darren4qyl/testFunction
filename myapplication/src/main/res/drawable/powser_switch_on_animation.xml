@@ -1,0 +1,19 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/lock_light_btn_0001" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0002" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0003" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0004" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0006" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0008" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0010" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0031" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0033" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0035" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0036" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0037" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0039" android:duration="10" />
+    <item android:drawable="@drawable/lock_light_btn_0040" android:duration="10" />
+</animation-list>
+

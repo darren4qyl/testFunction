@@ -44,7 +44,7 @@
             android:id="@+id/device_info_detail_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/lock_light_btn_0001"
+            android:src="@drawable/powser_switch_on_animation"
             android:scaleType="centerInside"
             android:rotation="270"
             />

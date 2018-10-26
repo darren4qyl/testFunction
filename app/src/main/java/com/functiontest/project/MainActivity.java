@@ -21,6 +21,7 @@ import android.view.MenuItem;
 
 import com.functiontest.project.fragment.BinderBgTestFragment;
 import com.functiontest.project.fragment.MutilateThreadArrayMapTestFragment;
+import com.functiontest.project.fragment.WebViewTest;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -119,6 +120,15 @@ public class MainActivity extends AppCompatActivity
                     fm.beginTransaction().add(fragment,"mutilate thread arraymap");
                 }
                 setFragmentTitle("Mutilate Thread Test ArrayMap");
+                break;
+            }
+            case R.id.web_test:{
+                fragment = fm.findFragmentByTag("web test");
+                if(fragment==null){
+                    fragment = new WebViewTest();
+                    fm.beginTransaction().add(fragment,"web test");
+                }
+                setFragmentTitle("Web test");
                 break;
             }
         }

@@ -30,6 +30,30 @@
         android:textAllCaps="false"
         android:text="Call activity binder code2"/>
     <Button
+        android:id="@+id/binder_bg_btn_binder_call3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code 9021"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code 9022"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code 9023"/>
+    <Button
+        android:id="@+id/binder_bg_btn_binder_call6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Call activity binder code 9024"/>
+    <Button
         android:id="@+id/binder_bg_btn_binder_call_specify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
